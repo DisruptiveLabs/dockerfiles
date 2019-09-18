@@ -1,6 +1,7 @@
 FROM debian
 
 ADD https://dl.yarnpkg.com/debian/pubkey.gpg /tmp/yarnpkg.gpg
+ADD wkhtmltox_0.12.5-1.buster_amd64.tar.xz /
 
 RUN apt-get update \
     && apt-get upgrade -y \
