@@ -15,6 +15,7 @@ RUN apt-get update \
         redis-server \
         postgresql postgresql-client postgresql-contrib \
         chromium chromium-driver \
+    && update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN sed --in-place '/en_US.UTF-8/s/^#//' /etc/locale.gen \
